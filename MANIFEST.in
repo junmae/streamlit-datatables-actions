@@ -1,0 +1,2 @@
+recursive-include st_datatables/frontend/build *
+global-exclude *.py[cod] __pycache__ *.DS_Store
