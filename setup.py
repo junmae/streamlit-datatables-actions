@@ -11,7 +11,7 @@ setup(
     description="Streamlit custom component: DataTables (React) wrapper",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/junmae/streamlit-datatables",
+    url="https://github.com/junmae/streamlit-datatables-actions",
     license="MIT",
     packages=find_packages(exclude=("examples", "tests", "e2e")),
     include_package_data=True,
@@ -40,7 +40,7 @@ setup(
     ],
     keywords=["streamlit", "component", "datatable", "react"],
     project_urls={
-        "Source": "https://github.com/junmae/streamlit-datatables",
-        "Issues": "https://github.com/junmae/streamlit-datatables/issues",
+        "Source": "https://github.com/junmae/streamlit-datatables-actions",
+        "Issues": "https://github.com/junmae/streamlit-datatables-actions/issues",
     },
 )
