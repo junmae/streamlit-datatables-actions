@@ -18,6 +18,7 @@ else:
 
 def st_datatables(
     df = None,
+    id_col="ID",
     pageLength=25, 
     lengthMenu = [10, 25, 50, 100], 
     orderable_cols=[],
@@ -107,6 +108,7 @@ def st_datatables(
     component_value = _component_func(
         columns=columns,
         data=data,
+        id_col=id_col,
         pageLength=pageLength,
         lengthMenu=lengthMenu,
         orderable=orderable_cols,

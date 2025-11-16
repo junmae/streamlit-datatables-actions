@@ -38,6 +38,7 @@ type ActionsConfig = {
 type Args = {
   columns: string[]
   data: any[]
+  id_col?: string
   pageLength?: number
   lengthMenu?: number[]
   orderable?: string[]
@@ -56,6 +57,7 @@ function MyComponent({ args, disabled, theme }: ComponentProps): ReactElement {
   const {
     columns = [],
     data = [],
+    id_col = "ID",
     pageLength = 50,
     lengthMenu = [10, 25, 50, 100],
     orderable = [],
@@ -273,6 +275,12 @@ function MyComponent({ args, disabled, theme }: ComponentProps): ReactElement {
           scrollX: scrollX as any,
           scrollY: scrollY as any,
           deferRender: deferRender,
+          createdRow: function (row: Node, rowData: any) {
+            const idValue = rowData?.[id_col] ?? ""
+            if (idValue !== "") {
+              ;(row as HTMLElement).id = `row-${idValue}`
+            }
+          },
           ...(layout ? { layout } : {}),
         }}
       ></DataTable>
